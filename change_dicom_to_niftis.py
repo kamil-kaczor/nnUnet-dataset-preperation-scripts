@@ -19,8 +19,8 @@ os.makedirs(args.output_dir+'imagesTr/', exist_ok=True)
 os.makedirs(args.output_dir+'imagesTs/', exist_ok=True)
 os.makedirs(args.output_dir+'labelsTr/', exist_ok=True)
 
-training_output_dir = args.output_dir+'imagesTr/'
-labels_output_dir = args.output_dir+'labelsTr/'
+training_output_dir = args.output_dir + '/' + 'imagesTr/'
+labels_output_dir = args.output_dir + '/' + 'labelsTr/'
 
 list_of_patient_dirs = os.listdir(args.input_dir)
 number_of_patients = len(list_of_patient_dirs)
