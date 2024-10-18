@@ -13,7 +13,7 @@ list_of_patient_firs = os.listdir(args.input_dir)
 number_of_patients = len(list_of_patient_firs)
 
 index = 0
-for patient_dir in number_of_patients:
+for patient_dir in list_of_patient_firs:
     for file_name in os.listdir(args.input_dir + patient_dir):
         if file_name.endswith('.zip'):
             with zipfile.ZipFile(args.input_dir + patient_dir + '/' + file_name, 'r') as zip_ref:
