@@ -26,9 +26,9 @@ list_of_patient_dirs = os.listdir(args.input_dir)
 number_of_patients = len(list_of_patient_dirs)
 index=0
 for dir_name in list_of_patient_dirs:
-    tr_patient_data_dir = args.input_dir + dir_name + '/' + 'PATIENT_DICOM/'
+    tr_patient_data_dir = args.input_dir + '/' + dir_name + '/' + 'PATIENT_DICOM/'
     dicom2nifti.dicom_series_to_nifti(tr_patient_data_dir, training_output_dir+str(index))
-    label_patient_data_dir = args.input_dir + dir_name + '/' + 'MASKS_DICOM/liver/'
+    label_patient_data_dir = args.input_dir + '/' + dir_name + '/' + 'MASKS_DICOM/liver/'
     dicom2nifti.dicom_series_to_nifti(label_patient_data_dir, labels_output_dir+str(index))
     index += 1
     print(f'Done: {index} out of {number_of_patients}')
