@@ -35,15 +35,15 @@ python unzip_files.py --input_dir 3Dircadb1/
 python change_dicom_to_niftis.py --input_dir 3Dircadb1/ --output_dir Dataset012_3Dircadb1Liver
 ```
 
-3. To change filenames to the structure introduced in https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md#dataset-folder-structure run (not advised to use this script at the moment as it changes data precision which destroys the data. Probably related to shutil.copy, one can try to change the method or do it manually):
+3. To change filenames to the structure introduced in https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md#dataset-folder-structure run:
 * Labels:
 ```
-python change_file_names_to_dataset_ids.py --input_dir Dataset012_3Dircadb1Liver/labelsTr/ --output_dir Dataset012_3Dircadb1Liver/labelsTr/ --file_prefix 3Dircadb1 --create_labels
+bash change_file_names.sh Dataset012_3Dircadb1Liver/labelsTr/
 ```
-    
+
 * Images:
 ```
-python change_file_names_to_dataset_ids.py --input_dir Dataset012_3Dircadb1Liver/imagesTr/ --output_dir Dataset012_3Dircadb1Liver/imagesTr/ --file_prefix 3Dircadb1
+bash change_file_names.sh Dataset012_3Dircadb1Liver/imagesTr/
 ```
 
 4. To pack .nii files to .nii.gz run:
