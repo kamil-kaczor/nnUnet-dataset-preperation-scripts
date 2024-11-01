@@ -1,6 +1,11 @@
 #!/bin/bash
 set -xe
 dir=$1
+is_training_sample=$2
+
+if [ $is_training_sample ]; then
+    channel='_0000'
+fi
 
 idx=0
 for f in "$dir"/*; do
@@ -11,6 +16,6 @@ for f in "$dir"/*; do
     else
         file_idx="$idx"
     fi
-    mv $f $dir/train_"$file_idx"_0000.nii
+    mv $f $dir/Dircadb_"$file_idx"$channel.nii.gz
     idx=$((idx+1));
 done
