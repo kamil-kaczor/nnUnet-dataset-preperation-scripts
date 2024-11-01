@@ -43,7 +43,7 @@ bash change_file_names.sh Dataset012_3Dircadb1Liver/labelsTr/
 
 * Images:
 ```
-bash change_file_names.sh Dataset012_3Dircadb1Liver/imagesTr/
+bash change_file_names.sh Dataset012_3Dircadb1Liver/imagesTr/ true
 ```
 
 4. To pack .nii files to .nii.gz run:
