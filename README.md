@@ -27,6 +27,7 @@ Steps below should be done in order to correctly prepare the data
 
 1. To unpack data run:
 ```
+unzip 3Dircadb1.zip
 python unzip_files.py --input_dir 3Dircadb1/
 ```
 
