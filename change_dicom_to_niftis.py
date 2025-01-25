@@ -15,9 +15,9 @@ parser.add_argument("--output_dir",
                     help="dir to which files are moved")
 args = parser.parse_args()
 
-os.makedirs(args.output_dir+'imagesTr/', exist_ok=True)
-os.makedirs(args.output_dir+'imagesTs/', exist_ok=True)
-os.makedirs(args.output_dir+'labelsTr/', exist_ok=True)
+os.makedirs(args.output_dir + '/' + 'imagesTr/', exist_ok=True)
+os.makedirs(args.output_dir + '/' + 'imagesTs/', exist_ok=True)
+os.makedirs(args.output_dir + '/' + 'labelsTr/', exist_ok=True)
 
 training_output_dir = args.output_dir + '/' + 'imagesTr/'
 labels_output_dir = args.output_dir + '/' + 'labelsTr/'
