@@ -35,8 +35,14 @@ python unzip_files.py --input_dir 3Dircadb1/
 ```
 python change_dicom_to_niftis.py --input_dir 3Dircadb1/ --output_dir Dataset012_3Dircadb1Liver
 ```
+3. To pack .nii files to .nii.gz run:
+```
+Dataset012_3Dircadb1Liver/
+gzip -v -r imagesT*
+gzip -v -r labelsTr
+```
 
-3. To change filenames to the structure introduced in https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md#dataset-folder-structure run:
+4. To change filenames to the structure introduced in https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md#dataset-folder-structure run:
 * Labels:
 ```
 bash change_file_names.sh Dataset012_3Dircadb1Liver/labelsTr/
@@ -45,13 +51,6 @@ bash change_file_names.sh Dataset012_3Dircadb1Liver/labelsTr/
 * Images:
 ```
 bash change_file_names.sh Dataset012_3Dircadb1Liver/imagesTr/ true
-```
-
-4. To pack .nii files to .nii.gz run:
-```
-Dataset012_3Dircadb1Liver/
-gzip -v -r imagesT*
-gzip -v -r labelsTr
 ```
 
 5. To create json dataset description one can use generate_dataset_json.py from nnUnet scripts or for 3Dircadb1 just use dataset.json from this repository and modify it for one's use.
